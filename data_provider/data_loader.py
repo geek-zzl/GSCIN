@@ -832,13 +832,15 @@ class Dataset_PEMS(Dataset):
         print('data file:', data_file)
         data = np.load(data_file, allow_pickle=True)
         data = data['data'][:, :, 0]
-
+        # 输出self的类名
+        print(self.__class__, data_file, data.shape)
         train_ratio = 0.6
         valid_ratio = 0.2
         train_data = data[:int(train_ratio * len(data))]
         valid_data = data[int(train_ratio * len(data)):int((train_ratio + valid_ratio) * len(data))]
         test_data = data[int((train_ratio + valid_ratio) * len(data)):]
         total_data = [train_data, valid_data, test_data]
+        print(len(train_data), len(valid_data), len(test_data))
         data = total_data[self.set_type]
 
         if self.scale:

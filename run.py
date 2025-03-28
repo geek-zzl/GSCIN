@@ -37,7 +37,7 @@ parser.add_argument('--model', type=str, default='TimeMixer',
 parser.add_argument('--data', type=str, default='PEMS', help='dataset type'
                     # , required=True
                     )
-parser.add_argument('--root_path', type=str, default='./dataset/PEMS/', help='root path of the data file')
+parser.add_argument('--root_path', type=str, default='./data/PEMS03/', help='root path of the data file')
 parser.add_argument('--data_path', type=str, default='PEMS03.npz', help='data file')
 parser.add_argument('--features', type=str, default='M',
                     help='forecasting task, options:[M, S, MS]; M:multivariate predict multivariate, S:univariate predict univariate, MS:multivariate predict univariate')
@@ -124,11 +124,11 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     args.use_gpu = True if torch.cuda.is_available() and args.use_gpu else False
-    wandb.init(
-        project="TimeMixer",  # Change to your project name
-        config=vars(args),  # Log hyperparameters
-        name=f"Exp_{args.des}"
-    )
+    # wandb.init(
+    #     project="TimeMixer",  # Change to your project name
+    #     config=vars(args),  # Log hyperparameters
+    #     name=f"Exp_{args.des}"
+    # )
     if args.use_gpu and args.use_multi_gpu:
         args.devices = args.devices.replace(' ', '')
         device_ids = args.devices.split(',')

@@ -1,3 +1,10 @@
 wandb
-checkpoint
-wandb
+checkpoints
+test_results
+results
+exp/__pycache__/*
+data_provider/__pycache__/*
+data_provider/__pycache__/*
+data_provider/__pycache__/data_factory.cpython-38.pyc
+data_provider/__pycache__/data_loader.cpython-38.pyc
+exp/__pycache__/exp_long_term_forecasting.cpython-38.pyc

@@ -7,3 +7,6 @@ mae:16.560531616210938, mape:0.16036927700042725, rmse:25.9813289642334
 long_term_forecast_PEMS03_none_TimeMixer_PEMS_sl96_pl12_dm128_nh8_el5_dl1_df256_fc3_ebtimeF_dtTrue_Exp 01 test code _0  
 mae:16.560531616210938, mape:0.16036927700042725, rmse:25.9813289642334
 
+long_term_forecast_PEMS03_none_TimeMixer_PEMS_sl96_pl12_dm128_nh8_el5_dl1_df256_fc3_ebtimeF_dtTrue_Exp 01 test code _0  
+mae:16.560531616210938, mape:0.16036927700042725, rmse:25.9813289642334
+
